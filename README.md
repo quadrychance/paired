@@ -1,9 +1,8 @@
-# one-datum
+# paired
 
-What can we infer about an orbit from the Gaia RV jitter?
 
 ## Usage
-
+The paired pipeline is intended to be an ancillary tool to the Gaia releases of radial velocity data.
 This project includes a pipeline component and a user-facing library.
 For now, this README just covers the pipeline usage which is designed to be run using [snakemake](https://snakemake.readthedocs.io).
 
@@ -45,12 +44,12 @@ snakemake --profile=one-datum
 
 where `one-datum` is the name of the directory where the profile configuration file is saved.
 
-Take a look at the [default config files](https://github.com/one-datum/pipeline/tree/main/config) for all the options, but you might want to explicitly set the `results_basedir` parameter so that large files don't get written to your working directory.
+Take a look at the [default config files](https://github.com/quadrychance/paired/epipeline/tree/main/config) for all the options, but you might want to explicitly set the `results_basedir` parameter so that large files don't get written to your working directory.
 
 
 ### Running the pipeline
 
-The following command should run the full pipeline and produce a catalog estimated binary parameters for all Gaia EDR3 radial velocity sources:
+The following command should run the full pipeline and produce a catalog estimated binary parameters for all Gaia DR3 radial velocity sources:
 
 ```bash
 snakemake --profile=one-datum
